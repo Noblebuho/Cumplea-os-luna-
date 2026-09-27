@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños, Luna! ✨</title>
+    <style>
+        /* Estilos generales */
+        :root {
+            --bg-color: #0f0c20;
+            --accent-color: #e06c53; /* Tono cálido / pelirrojo elegante */
+            --gold-color: #f3ce72;
+            --text-color: #f0f0f5;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            background-image: radial-gradient(circle at 50% 20%, #201335 0%, #0f0c20 100%);
+            overflow-x: hidden;
+        }
+
+        /* Encabezado Principal */
+        header {
+            text-align: center;
+            padding: 60px 20px 30px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--gold-color);
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(243, 206, 114, 0.4);
+            font-family: Georgia, serif;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Galería / Tarjeta Visual */
+        .hero-card {
+            display: flex;
+            flex-wrap: wrap;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 40px;
+        }
+
+        .hero-img {
+            flex: 1 1 300px;
+            max-height: 450px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .hero-content {
+            flex: 1 1 300px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Mensaje Principal */
+        .message-title {
+            font-size: 1.8rem;
+            color: var(--gold-color);
+            margin-bottom: 15px;
+        }
+
+        .message-text {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #d1d1e0;
+        }
+
+        /* Mensaje Discreto 1: Acróstico Oculto */
+        /* Las letras destacadas sutilmente forman "ME GUSTAS" */
+        .hidden-acrostic {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-left: 3px solid var(--accent-color);
+            border-radius: 8px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        .hidden-acrostic p {
+            margin: 6px 0;
+            line-height: 1.6;
+        }
+
+        /* Resalte casi imperceptible para la primera letra */
+        .secret-letter {
+            color: #fff;
+            font-weight: 600;
+            position: relative;
+        }
+
+        /* Sección de Deseos Interactiva */
+        .interactive-section {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .moon-button {
+            background: transparent;
+            border: 2px solid var(--gold-color);
+            color: var(--gold-color);
+            padding: 12px 30px;
+            font-size: 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(243, 206, 114, 0.2);
+        }
+
+        .moon-button:hover {
+            background: var(--gold-color);
+            color: var(--bg-color);
+            box-shadow: 0 0 20px rgba(243, 206, 114, 0.6);
+        }
+
+        /* Modal o Nota Secreta (Easter Egg) */
+        .secret-note {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(224, 108, 83, 0.15);
+            border: 1px dashed var(--accent-color);
+            border-radius: 12px;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            color: #7a7a9a;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Estrellas decorativas de fondo */
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: blink 2s infinite alternate;
+        }
+
+        @keyframes blink {
+            from { opacity: 0.2; }
+            to { opacity: 0.8; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Happy Birthday, Luna 🌙</h1>
+        <div class="subtitle">UNA NOCHE ESPECIAL PARA ALGUIEN ÚNICA</div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Tarjeta Principal -->
+        <div class="hero-card">
+            <img src="watermarked_img_9530019813304592418.jpg" alt="Luna" class="hero-img">
+            <div class="hero-content">
+                <div class="message-title">Para ti en tu día</div>
+                <div class="message-text">
+                    Que este nuevo año de vida venga lleno de momentos tan brillantes y cálidos como tu cabello pelirrojo y tu energía. Es increíble coincidir contigo y ver cómo iluminas todo a tu alrededor.
+                </div>
+            </div>
+        </div>
+
+        <!-- Mensaje Discreto (Acróstico sutil) -->
+        <!-- La primera letra de cada frase forma disimuladamente "ME GUSTAS" -->
+        <div class="hidden-acrostic">
+            <p><span class="secret-letter">M</span>omentos especiales son los que se comparten con personas que inspiran.</p>
+            <p><span class="secret-letter">E</span>n cada detalle hay una luz difícil de no notar.</p>
+            <br>
+            <p><span class="secret-letter">G</span>racias por la alegría constante que transmites siempre.</p>
+            <p><span class="secret-letter">U</span>n año más para cumplir cada meta y cada sueño.</p>
+            <p><span class="secret-letter">S</span>iempre mantén esa sonrisa tan auténtica.</p>
+            <p><span class="secret-letter">T</span>u forma de ser hace que cualquier día sea mejor.</p>
+            <p><span class="secret-letter">A</span>precio mucho la oportunidad de conocerte cada vez más.</p>
+            <p><span class="secret-letter">S</span>igue deslumbrando como solo tú sabes hacerlo.</p>
+        </div>
+
+        <!-- Sección Interactiva con mensaje oculto -->
+        <div class="interactive-section">
+            <button class="moon-button" onclick="revealSecret()">Revelar un deseo oculto ✨</button>
+            
+            <div id="secretNote" class="secret-note">
+                <p style="color: var(--gold-color); font-weight: bold; margin-bottom: 5px;">Un pequeño secreto para Luna...</p>
+                <p style="font-size: 0.95rem; line-height: 1.6;">
+                    La verdad es que no solo quería desearte un feliz cumpleaños, sino también decirte de una forma sutil que hay alguien a quien le sacas una sonrisa extra cada vez que hablas con él. Ojalá hoy te consientan muchísimo. ❤️
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        Hecho especialmente para Luna • ✨
+    </footer>
+
+    <script>
+        // Función para mostrar la nota secreta
+        function revealSecret() {
+            const note = document.getElementById('secretNote');
+            if (note.style.display === 'block') {
+                note.style.display = 'none';
+            } else {
+                note.style.display = 'block';
+            }
+        }
+
+        // Crear estrellas flotantes sutiles en el fondo
+        for (let i = 0; i < 35; i++) {
+            let star = document.createElement('div');
+            star.className = 'star';
+            star.style.width = Math.random() * 3 + 'px';
+            star.style.height = star.style.width;
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.animationDuration = (Math.random() * 3 + 1) + 's';
+            document.body.appendChild(star);
+        }
+    </script>
+</body>
+</html>
