@@ -7,11 +7,12 @@
     <style>
         /* Estilos generales */
         :root {
-            --bg-color: #0f0c20;
-            --accent-color: #e06c53; /* Tono cálido / pelirrojo elegante */
+            --bg-color: #0d0814;
+            --accent-color: #d94b36; /* Rojo cálido estilo su cabello */
+            --glow-color: #f79d65;
             --gold-color: #f3ce72;
-            --text-color: #f0f0f5;
-            --card-bg: rgba(255, 255, 255, 0.05);
+            --text-color: #f4f4f8;
+            --card-bg: rgba(255, 255, 255, 0.04);
         }
 
         body {
@@ -20,29 +21,30 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            background-image: radial-gradient(circle at 50% 20%, #201335 0%, #0f0c20 100%);
+            background-image: radial-gradient(circle at 50% 30%, #29101b 0%, #0d0814 100%);
             overflow-x: hidden;
+            padding-bottom: 80px; /* Espacio para el reproductor flotante */
         }
 
         /* Encabezado Principal */
         header {
             text-align: center;
-            padding: 60px 20px 30px;
+            padding: 50px 20px 20px;
             position: relative;
         }
 
         h1 {
-            font-size: 3rem;
-            color: var(--gold-color);
-            margin-bottom: 10px;
-            text-shadow: 0 0 15px rgba(243, 206, 114, 0.4);
+            font-size: 3.2rem;
+            color: var(--glow-color);
+            margin-bottom: 8px;
+            text-shadow: 0 0 18px rgba(247, 157, 101, 0.5);
             font-family: Georgia, serif;
         }
 
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--accent-color);
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             font-weight: 300;
         }
 
@@ -53,29 +55,29 @@
             padding: 20px;
         }
 
-        /* Galería / Tarjeta Visual */
+        /* Tarjetas Visuales */
         .hero-card {
             display: flex;
             flex-wrap: wrap;
             background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(247, 157, 101, 0.2);
             border-radius: 20px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.6);
             margin-bottom: 40px;
         }
 
         .hero-img {
-            flex: 1 1 300px;
-            max-height: 450px;
+            flex: 1 1 350px;
+            max-height: 480px;
             object-fit: cover;
             width: 100%;
         }
 
         .hero-content {
             flex: 1 1 300px;
-            padding: 30px;
+            padding: 35px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -83,7 +85,7 @@
 
         /* Mensaje Principal */
         .message-title {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--gold-color);
             margin-bottom: 15px;
         }
@@ -91,65 +93,62 @@
         .message-text {
             line-height: 1.8;
             font-size: 1.05rem;
-            color: #d1d1e0;
+            color: #e2d9e6;
         }
 
         /* Mensaje Discreto 1: Acróstico Oculto */
-        /* Las letras destacadas sutilmente forman "ME GUSTAS" */
         .hidden-acrostic {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 20px;
+            background: rgba(20, 10, 25, 0.5);
+            padding: 25px;
             border-left: 3px solid var(--accent-color);
-            border-radius: 8px;
+            border-radius: 10px;
             margin: 30px 0;
             font-style: italic;
+            border: 1px solid rgba(217, 75, 54, 0.15);
         }
 
         .hidden-acrostic p {
-            margin: 6px 0;
+            margin: 8px 0;
             line-height: 1.6;
         }
 
-        /* Resalte casi imperceptible para la primera letra */
         .secret-letter {
-            color: #fff;
+            color: var(--glow-color);
             font-weight: 600;
-            position: relative;
         }
 
-        /* Sección de Deseos Interactiva */
+        /* Sección Interactiva con Mensaje Oculto */
         .interactive-section {
             text-align: center;
-            margin: 50px 0;
+            margin: 40px 0;
         }
 
         .moon-button {
             background: transparent;
-            border: 2px solid var(--gold-color);
-            color: var(--gold-color);
-            padding: 12px 30px;
+            border: 2px solid var(--glow-color);
+            color: var(--glow-color);
+            padding: 12px 32px;
             font-size: 1rem;
             border-radius: 30px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 0 10px rgba(243, 206, 114, 0.2);
+            box-shadow: 0 0 12px rgba(247, 157, 101, 0.2);
         }
 
         .moon-button:hover {
-            background: var(--gold-color);
+            background: var(--glow-color);
             color: var(--bg-color);
-            box-shadow: 0 0 20px rgba(243, 206, 114, 0.6);
+            box-shadow: 0 0 25px rgba(247, 157, 101, 0.6);
         }
 
-        /* Modal o Nota Secreta (Easter Egg) */
         .secret-note {
             display: none;
             margin-top: 25px;
             padding: 20px;
-            background: rgba(224, 108, 83, 0.15);
+            background: rgba(217, 75, 54, 0.12);
             border: 1px dashed var(--accent-color);
             border-radius: 12px;
-            animation: fadeIn 1s ease forwards;
+            animation: fadeIn 0.8s ease forwards;
         }
 
         @keyframes fadeIn {
@@ -157,21 +156,69 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Reproductor de Audio Flotante */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(13, 8, 20, 0.85);
+            border: 1px solid rgba(247, 157, 101, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 10px 18px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+
+        .music-btn {
+            background: var(--accent-color);
+            border: none;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease, background 0.3s ease;
+        }
+
+        .music-btn:hover {
+            transform: scale(1.08);
+            background: var(--glow-color);
+        }
+
+        .music-info {
+            font-size: 0.85rem;
+            color: var(--text-color);
+        }
+
+        .music-info span {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--glow-color);
+        }
+
         footer {
             text-align: center;
             padding: 30px;
             font-size: 0.9rem;
-            color: #7a7a9a;
+            color: #7a6a82;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Estrellas decorativas de fondo */
+        /* Estrellas decorativas */
         .star {
             position: absolute;
-            background: white;
+            background: #fff;
             border-radius: 50%;
-            opacity: 0.5;
-            animation: blink 2s infinite alternate;
+            opacity: 0.4;
+            animation: blink 2.5s infinite alternate;
         }
 
         @keyframes blink {
@@ -184,48 +231,70 @@
 
     <header>
         <h1>Happy Birthday, Luna 🌙</h1>
-        <div class="subtitle">UNA NOCHE ESPECIAL PARA ALGUIEN ÚNICA</div>
+        <div class="subtitle">UN DÍA ESPECIAL PARA ALGUIEN ÚNICA</div>
     </header>
 
     <div class="container">
         
-        <!-- Tarjeta Principal -->
+        <!-- Tarjeta 1: luna-cumple.jpg -->
         <div class="hero-card">
-            <img src="watermarked_img_9530019813304592418.jpg" alt="Luna" class="hero-img">
+            <img src="main/luna-cumple.jpg" alt="Luna Cumpleaños" class="hero-img">
             <div class="hero-content">
                 <div class="message-title">Para ti en tu día</div>
                 <div class="message-text">
-                    Que este nuevo año de vida venga lleno de momentos tan brillantes y cálidos como tu cabello pelirrojo y tu energía. Es increíble coincidir contigo y ver cómo iluminas todo a tu alrededor.
+                    Que este nuevo año de vida venga lleno de momentos tan brillantes y cálidos como tu energía. Es increíble coincidir contigo y ver cómo iluminas todo a tu alrededor.
                 </div>
             </div>
         </div>
 
-        <!-- Mensaje Discreto (Acróstico sutil) -->
-        <!-- La primera letra de cada frase forma disimuladamente "ME GUSTAS" -->
+        <!-- Acróstico Discreto (Las letras forman "ME GUSTAS") -->
         <div class="hidden-acrostic">
-            <p><span class="secret-letter">M</span>omentos especiales son los que se comparten con personas que inspiran.</p>
-            <p><span class="secret-letter">E</span>n cada detalle hay una luz difícil de no notar.</p>
+            <p><span class="secret-letter">M</span>omentos compartidos que siempre dejan un buen recuerdo.</p>
+            <p><span class="secret-letter">E</span>n cada detalle tuyo hay algo impredecible y fascinante.</p>
             <br>
-            <p><span class="secret-letter">G</span>racias por la alegría constante que transmites siempre.</p>
-            <p><span class="secret-letter">U</span>n año más para cumplir cada meta y cada sueño.</p>
-            <p><span class="secret-letter">S</span>iempre mantén esa sonrisa tan auténtica.</p>
-            <p><span class="secret-letter">T</span>u forma de ser hace que cualquier día sea mejor.</p>
-            <p><span class="secret-letter">A</span>precio mucho la oportunidad de conocerte cada vez más.</p>
-            <p><span class="secret-letter">S</span>igue deslumbrando como solo tú sabes hacerlo.</p>
+            <p><span class="secret-letter">G</span>racias por la buena vibra que transmites siempre.</p>
+            <p><span class="secret-letter">U</span>n año más para seguir creando y disfrutando la vida.</p>
+            <p><span class="secret-letter">S</span>iempre manteniendo esa esencia tan tuya.</p>
+            <p><span class="secret-letter">T</span>al como eres, haces que cualquier día sea más interesante.</p>
+            <p><span class="secret-letter">A</span>precio mucho la oportunidad de coincidir contigo.</p>
+            <p><span class="secret-letter">S</span>igue brillando a tu propio ritmo.</p>
         </div>
 
-        <!-- Sección Interactiva con mensaje oculto -->
+        <!-- Tarjeta 2: luna-estilo.jpg -->
+        <div class="hero-card">
+            <img src="main/luna-estilo.jpg" alt="Luna Estilo" class="hero-img">
+            <div class="hero-content">
+                <div class="message-title">Una vibra única</div>
+                <div class="message-text">
+                    Hay personas que tienen un estilo y una luz tan auténtica que resulta imposible no notarlas. Que sigas disfrutando cada proyecto, cada canción y cada momento como solo tú sabes hacerlo.
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección Interactiva con Nota Oculta -->
         <div class="interactive-section">
-            <button class="moon-button" onclick="revealSecret()">Revelar un deseo oculto ✨</button>
+            <button class="moon-button" onclick="revealSecret()">Descubrir una nota oculta ✨</button>
             
             <div id="secretNote" class="secret-note">
-                <p style="color: var(--gold-color); font-weight: bold; margin-bottom: 5px;">Un pequeño secreto para Luna...</p>
+                <p style="color: var(--gold-color); font-weight: bold; margin-bottom: 8px;">Un detalle discreto para Luna...</p>
                 <p style="font-size: 0.95rem; line-height: 1.6;">
-                    La verdad es que no solo quería desearte un feliz cumpleaños, sino también decirte de una forma sutil que hay alguien a quien le sacas una sonrisa extra cada vez que hablas con él. Ojalá hoy te consientan muchísimo. ❤️
+                    La verdad es que no quería dejar pasar este día sin decirte de forma discreta que tienes algo muy especial que atrapa la atención de cualquiera... especialmente la mía. Que tengas un cumpleaños increíble. 🌿✨
                 </p>
             </div>
         </div>
 
+    </div>
+
+    <!-- Reproductor de Audio Flotante -->
+    <div class="music-player">
+        <button class="music-btn" id="playBtn" onclick="toggleMusic()">▶</button>
+        <div class="music-info">
+            <strong>The Perfect Pair</strong>
+            <span>Beabadoobee 🎵</span>
+        </div>
+        <audio id="bgMusic" loop preload="auto">
+            <source src="https://raw.githubusercontent.com/Noblebuho/Cumplea-os-luna-/refs/heads/main/Beabadoobee%20-%20the%20perfect%20pair%20(Official%20Live%20Video).mp3" type="audio/mpeg">
+        </audio>
     </div>
 
     <footer>
@@ -233,17 +302,37 @@
     </footer>
 
     <script>
-        // Función para mostrar la nota secreta
-        function revealSecret() {
-            const note = document.getElementById('secretNote');
-            if (note.style.display === 'block') {
-                note.style.display = 'none';
+        const audio = document.getElementById('bgMusic');
+        const playBtn = document.getElementById('playBtn');
+
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+                playBtn.textContent = '❚❚';
             } else {
-                note.style.display = 'block';
+                audio.pause();
+                playBtn.textContent = '▶';
             }
         }
 
-        // Crear estrellas flotantes sutiles en el fondo
+        // Intenta iniciar suavemente al hacer el primer clic en la página (política de navegadores)
+        document.addEventListener('click', function() {
+            if (audio.paused && playBtn.textContent === '▶') {
+                audio.volume = 0.5;
+                audio.play().then(() => {
+                    playBtn.textContent = '❚❚';
+                }).catch(() => {
+                    // El navegador bloqueó el autoplay hasta que presione el botón directamente
+                });
+            }
+        }, { once: true });
+
+        function revealSecret() {
+            const note = document.getElementById('secretNote');
+            note.style.display = note.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Crear estrellas flotantes en el fondo
         for (let i = 0; i < 35; i++) {
             let star = document.createElement('div');
             star.className = 'star';
